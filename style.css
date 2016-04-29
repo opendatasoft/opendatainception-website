@@ -5,22 +5,27 @@ html {
     background-color: #fff;
     color: #EF4836;
 }
-                       
+
 body {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 100%;
-  height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
     font-family: 'Roboto Slab', serif;
-
-
 }
 
 body .container-fluid:nth-child(2) {
     padding-right:0px;
     padding-left:0px;
     padding-top: 50px;
+}
+
+.odswidget-geo-scroller h2.scroller-control {
+    font-size: 12px;
+}
+.odswidget-geo-scroller h2 {
+    text-align: right;
 }
 
 /* NAVIGATION */
@@ -37,14 +42,14 @@ body .container-fluid:nth-child(2) {
 
 .navbar-nav > ul {
     text-align: center;
-        margin-left: auto; 
-        margin-right: auto;
+    margin-left: auto; 
+    margin-right: auto;
 }
 
 .navbar-nav > li {
     text-align: center;
-        margin-left: auto; 
-        margin-right: auto;
+    margin-left: auto; 
+    margin-right: auto;
 }
 .navbar-default .navbar-nav > li > a {
     color: #777;
@@ -70,31 +75,33 @@ body .container-fluid:nth-child(2) {
 /* NAVBAR MEDIA QUERIES */
 
 /* Medium Devices, Desktops */
-    @media only screen and (max-width : 992px) {
+@media only screen and (max-width : 992px) {
     .navbar-header {
-    float: left;
-    padding: 15px;
-    text-align: center;
-    width: 100%;
-}
-.navbar-brand {float:none;}
+        float: left;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
     }
+    .navbar-brand {float:none;}
+}
 
 /* SEARCH BOX */
 
 #ods-search {
     padding-top: 12px;
     padding-right: 20px;
+    display: inline-flex;
 }
 
 #ods-search .searchbox {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
-    width: 30em;
+    width: 25em;
     border: 1px solid #EF4836;
 }
 
+.clear-all,
 #ods-search button {
     padding-left: 10px;
     padding-right: 10px;
@@ -106,6 +113,27 @@ body .container-fluid:nth-child(2) {
     background: #EF4836;
 }
 
+.clear-all {
+    color: #fff;
+    float: right;
+    margin: 0 0 0 -30px;
+}
+
+.clear-all i,
+.clear-all span {
+    display: none;
+}
+
+.clear-all:hover {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.clear-all:after {
+    content: "Reset View";
+}
+
 #ods-search button, textarea {
     color: white;
 }
@@ -114,19 +142,23 @@ body .container-fluid:nth-child(2) {
     text-align: center;
 }
 
+ul li span { 
+    float: left;
+    width: 105px;
+}
+
+.odswidget-filter-summary .ng-binding {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
 /* SEARCH BOX MEDIA QUERIES */
 
-/* Large Devices, Wide Screens */
-    @media only screen and (max-width : 1200px) {
-        #ods-search .searchbox {
-            width: 15em;
-        }
-    }
-
-/* Medium Devices, Desktops */
-    @media only screen and (max-width : 992px) {
-        
-        .nav.navbar-nav.navbar-right {
+@media only screen and (max-width : 900px) {
+    .nav.navbar-nav.navbar-right {
         position: relative;
         width: 100%;
         margin: 0;
@@ -135,19 +167,22 @@ body .container-fluid:nth-child(2) {
     .nav.navbar-nav.navbar-right li {
         float: none;
     }
-    #ods-search {
-        padding: 0 0 20px 0;
-    }
     #ods-search .searchbox {
+        width: -moz-calc(100% - 100px);
+        width: -webkit-calc(100% - 100px);
+        width: -o-calc(100% - 100px);
         width: calc(100% - 100px);
     }
+    .clear-all {
+        color: #fff;
+        float: none;
+        margin: 0 0 0 0;
     }
-
-/* Hides Angular Magic in Tooltip */
+}
 
 .ng-cloak { 
-   display: none; 
-}
+    display: none; 
+ }
 
 .ng-leaflet-tooltip-cloak { 
     display: none;
@@ -185,7 +220,7 @@ footer a:hover {
 
 .leaflet-control-scale {
     bottom: 50px !important;
-	}
+}
 
 .leaflet-control-attribution {
     bottom: 50px !important;
