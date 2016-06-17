@@ -79,6 +79,7 @@
                 <ods-clear-all-filters ng-disabled="!opendatasources.parameters.q" context="opendatasources"></ods-clear-all-filters>
             </div>
         </div>
+                             <div ods-results="items" ods-results-context="opendatasources" ods-results-max="0"></div>
     </header>
 
     <section>
@@ -90,6 +91,19 @@
                  toolbar-drawing="false"
                  toolbar-fullscreen="false">
         </ods-map>
+
+        <div class="no-results" ng-if="!opendatasources.nhits">
+                Your search '{{ opendatasources.parameters.q }}' did not return any results. :( <br>
+                Try searching for topics or locations e.g.
+                <span class="suggestion" ng-click="opendatasources.parameters.q = 'Education'">Education</span>,
+                <span class="suggestion" ng-click="opendatasources.parameters.q = 'France'">France</span> or
+                <span class="suggestion" ng-click="opendatasources.parameters.q = 'Weather'">Weather</span> <br>
+                <button type="button"
+                        ng-click="$parent.opendatasources.nhits = 1;"
+                        class="no-results__close">
+                    Got it, thanks
+                </button>
+        </div>
     </section>
 
     <footer>

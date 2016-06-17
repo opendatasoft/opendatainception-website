@@ -158,3 +158,34 @@ section {
 .odswidget-map__map {
   min-height: 100px;
 }
+.no-results {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  max-width: calc(100% - 2*15px - 30px);
+  background-color: white;
+  border: 1px solid #EF4836;
+  padding: 7.5px;
+  border-radius: 10px;
+  text-align: center;
+  color: #EF4836;
+}
+.suggestion {
+  color: #EF4836;
+  font-weight: bold;
+  cursor: pointer;
+}
+.suggestion:hover {
+  text-decoration: underline;
+}
+.no-results__close {
+  background-color: white;
+  border: 1px solid #EF4836;
+  color: #EF4836;
+  border-radius: 10px;
+  margin-top: 7.5px;
+}
+.no-results__close:hover {
+  background-color: #EF4836;
+  color: white;
+}
