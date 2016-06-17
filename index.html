@@ -111,13 +111,13 @@
 
 </ods-dataset-context>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-sanitize.min.js"></script>
+<script src="/vendor/jquery-2.1.4/jquery.min.js"></script>
+<script src="/vendor/angular-1.4.4/angular.min.js"></script>
+<script src="/vendor/angular-1.4.4/angular-sanitize.min.js"></script>
 <script type="text/javascript" src="/vendor/ods-widgets-1.0.3/ods-widgets.js"></script>
 <script type="text/javascript">
     var ods = angular.module('ods-widgets');
-    ods.config(function (ODSWidgetsConfigProvider, ModuleLazyLoaderProvider) {
+    ods.config(function (ODSWidgetsConfigProvider) {
         ODSWidgetsConfigProvider.setConfig({
             basemaps: [{
                 "provider": "mapbox.light",
