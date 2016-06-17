@@ -1,0 +1,53 @@
+@import "variables";
+@import "fonts";
+@import "header";
+@import "footer";
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+}
+
+body {
+    height: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+ods-dataset-context {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 100%;
+}
+
+ods-map {
+    height: auto !important;
+    flex-grow: 99;
+}
+
+.odswidget-map {
+    height: 100%;
+}
+
+a {
+    color: @color-red;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+div.sumome-stylebufferbottom-shim {
+    display: none !important;
+}
+

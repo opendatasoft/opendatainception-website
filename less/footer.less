@@ -1,0 +1,17 @@
+footer {
+    text-align: center;
+
+    @media (max-width: @footer-breakpoint) {
+        padding: @gutter-width*3/4;
+        padding-bottom: @gutter-width*3/4 + 30px;
+    }
+    @media (min-width: @footer-breakpoint) {
+        padding: @gutter-width*3/4;
+    }
+}
+
+footer > a  {
+    display: inline-block;
+    margin: @gutter-width/4;
+}
+
