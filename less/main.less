@@ -29,15 +29,6 @@ ods-dataset-context {
     max-height: 100%;
 }
 
-ods-map {
-    height: auto !important;
-    flex-grow: 99;
-}
-
-.odswidget-map {
-    height: 100%;
-}
-
 a {
     color: @color-red;
     text-decoration: none;
@@ -47,7 +38,28 @@ a {
     }
 }
 
+// sumome placeholder
+
 div.sumome-stylebufferbottom-shim {
     display: none !important;
 }
 
+// map
+
+section {
+    flex-shrink: 2;
+    height: 100%;
+    position: relative;
+}
+
+.odswidget-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.odswidget-map,
+.odswidget-map__map {
+    min-height: 100px;
+}
