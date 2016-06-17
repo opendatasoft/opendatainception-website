@@ -92,7 +92,7 @@
                  toolbar-fullscreen="false">
         </ods-map>
 
-        <div class="no-results" ng-if="!opendatasources.nhits">
+        <div class="no-results" ng-if="opendatasources.nhits === 0">
                 Your search '{{ opendatasources.parameters.q }}' did not return any results. :( <br>
                 Try searching for topics or locations e.g.
                 <span class="suggestion" ng-click="opendatasources.parameters.q = 'Education'">Education</span>,
