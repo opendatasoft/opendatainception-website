@@ -16,3 +16,14 @@ footer > a  {
     margin: @gutter-width/4;
 }
 
+.visible-above-footer-breakpoint {
+    @media (max-width: @footer-breakpoint) {
+        display: none;
+    }
+}
+
+.visible-below-footer-breakpoint {
+    @media (min-width: @footer-breakpoint) {
+        display: none;
+    }
+}
