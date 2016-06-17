@@ -1,0 +1,29 @@
+footer {
+    flex-shrink: 0;
+    text-align: center;
+
+    @media (max-width: @footer-breakpoint) {
+        padding: @gutter-width*3/4;
+        padding-bottom: @gutter-width*3/4 + 30px;
+    }
+    @media (min-width: @footer-breakpoint) {
+        padding: @gutter-width*3/4;
+    }
+}
+
+footer > a  {
+    display: inline-block;
+    margin: @gutter-width/4;
+}
+
+.visible-above-footer-breakpoint {
+    @media (max-width: @footer-breakpoint) {
+        display: none;
+    }
+}
+
+.visible-below-footer-breakpoint {
+    @media (min-width: @footer-breakpoint) {
+        display: none;
+    }
+}
